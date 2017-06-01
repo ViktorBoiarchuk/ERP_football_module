@@ -39,16 +39,14 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Players data">
-                        <sheet>
-                            <group>
-                               <field name="name"/>
-                               <field name="surname"/>
-                               <field name="date_of_birth"/>
-                               <field name="age"/>
-                               <field name="team_id"/>
-                               <field name="favourite stadium"/>
-                            </group>
-                        </sheet>
+                        <group>
+                           <field name="name"/>
+                           <field name="surname"/>
+                           <field name="date_of_birth"/>
+                           <field name="age"/>
+                           <field name="team_id"/>
+                           <field name="favourite stadium"/>
+                        </group>
                     </form>
                 </field>
             </record>

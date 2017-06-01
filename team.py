@@ -8,7 +8,7 @@ class Team(osv.osv):
         'foundation_year': fields.integer('Foundation year', size=4, required=True),
         'starting_date': fields.date('First official match'),
         'colours': fields.text('Team colours'),
-        'player_ids': fields.one2many('player', 'player_id', 'Players'),
-        'stadium_id': fields.many2one('stadium', 'home stadium')
+        # 'player_ids': fields.one2many('football.player', 'player_id', 'Players'),
+        # 'stadium_id': fields.many2one('football.stadium', 'home stadium')
     }
 Team()

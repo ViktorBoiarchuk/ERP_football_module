@@ -29,8 +29,7 @@
                         <field name="date_of_foundation"/>
                         <field name="capacity"/>
                         <field name="compliance_with_UEFA"/>
-                        <field name="team_id"/>
-                        <field name="team_ids"/>
+                        <!--<field name="team_ids"/>-->
                     </tree>
                 </field>
             </record>
@@ -41,17 +40,14 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Stadiums data">
-                        <sheet>
-                            <group>
-                                <field name="name"/>
-                                <field name="country"/>
-                                <field name="date_of_foundation"/>
-                                <field name="capacity"/>
-                                <field name="compliance_with_UEFA"/>
-                                <field name="team_id"/>
-                                <field name="team_ids"/>
-                            </group>
-                        </sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="country"/>
+                            <field name="date_of_foundation"/>
+                            <field name="capacity"/>
+                            <field name="compliance_with_UEFA"/>
+                            <!--<field name="team_ids"/>-->
+                        </group>
                     </form>
                 </field>
             </record>

@@ -12,8 +12,8 @@
                             <field name="surname"/>
                             <field name="date_of_birth"/>
                             <field name="age"/>
-                            <field name="favourite team"/>
-                            <field name="hated team"/>
+                            <!--<field name="favourite team"/>-->
+                            <!--<field name="hated team"/>-->
                         </group>
                     </search>
                 </field>
@@ -29,9 +29,9 @@
                         <field name="surname"/>
                         <field name="date_of_birth"/>
                         <field name="age"/>
-                        <field name="favourite team"/>
+                        <!--<field name="favourite team"/>-->
                         <field name="team_id"/>
-                        <field name="hated team"/>
+                        <!--<field name="hated team"/>-->
                     </tree>
                 </field>
             </record>
@@ -42,17 +42,15 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Referees data">
-                        <sheet>
-                            <group>
-                                <field name="name"/>
-                                <field name="surname"/>
-                                <field name="date_of_birth"/>
-                                <field name="age"/>
-                                <field name="favourite team"/>
-                                <field name="team_id"/>
-                                <field name="hated team"/>
-                            </group>
-                        </sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                            <field name="date_of_birth"/>
+                            <field name="age"/>
+                            <!--<field name="favourite team"/>-->
+                            <field name="team_id"/>
+                            <!--<field name="hated team"/>-->
+                        </group>
                     </form>
                 </field>
             </record>

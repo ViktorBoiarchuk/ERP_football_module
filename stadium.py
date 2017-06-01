@@ -9,7 +9,7 @@ class Stadium(osv.osv):
         'date_of_foundation': fields.date('foundation', required=True),
         'capacity': fields.integer('capacity of the stadium', required=True),
         'compliance_with_UEFA': fields.boolean('UEFA requirements'),
-        'team_id': fields.one2many('team', 'team_id', 'home stadium', required=True),
-        'team_ids': fields.one2many('team', 'team_id', 'team played at the stadium', required=True)
+        # 'team_ids': fields.one2many('football.team', 'stadium_id', 'team played at the stadium', ),
+        'player_id': fields.many2one('football.player', 'Player', ),
     }
 Stadium()

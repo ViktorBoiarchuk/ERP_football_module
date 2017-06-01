@@ -9,10 +9,10 @@
 
     'depends': ['base'],
     'data': [
-        'fans_view.xml',
-        'player_view.xml',
-        'referee_view.xml.xml',
-        'stadium_view.xml',
+        # 'fans_view.xml',
+        # 'player_view.xml',
+        # 'referee_view.xml.xml',
+        # 'stadium_view.xml',
         'team_view.xml'
     ],
     'installable': True,

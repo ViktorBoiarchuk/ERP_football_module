@@ -9,7 +9,7 @@ class Fans(osv.osv):
         'date_of_foundation': fields.date('foundation', required=True),
         'number': fields.integer('the number of fans'),
         'sights': fields.boolean('Radicals sights'),
-        'team_id': fields.many2one('team', 'supported team', required=True),
-        'team_ids': fields.one2many('team', 'team_id', 'ultras brotherhood')
+        'team_id': fields.many2one('football.team', 'supported team', required=True),
+        # 'team_ids': fields.one2many('team', 'team_id', 'ultras brotherhood')
     }
 Fans()

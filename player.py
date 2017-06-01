@@ -8,7 +8,7 @@ class Player(osv.osv):
         'surname': fields.char('player surname', size=32, required=True),
         'date_of_birth': fields.date('date of birth'),
         'age': fields.integer('age'),
-        'team_id': fields.many2one('team', 'team name', required=True),
-        'favourite stadium': fields.many2one('stadium', 'lucky stadium')
+        'team_id': fields.many2one('football.team', 'team name', required=True),
+        # 'stadium_ids': fields.one2many('football.stadium', 'lucky stadium')
     }
 Player()
