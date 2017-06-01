@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+        <data>
+            <record id="football_referee_search" model="ir.ui.view">
+                <field name="name">football.referee.search</field>
+                <field name="model">football.referee</field>
+                <field name="type">search</field>
+                <field name="arch" type="xml">
+                    <search string="Search for referee">
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                            <field name="date_of_birth"/>
+                            <field name="age"/>
+                            <field name="favourite team"/>
+                            <field name="hated team"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
+
+            <record id="football_referee_tree" model="ir.ui.view">
+                <field name="name">football.referee.tree</field>
+                <field name="model">football.referee</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Referees data">
+                        <field name="name"/>
+                        <field name="surname"/>
+                        <field name="date_of_birth"/>
+                        <field name="age"/>
+                        <field name="favourite team"/>
+                        <field name="team_id"/>
+                        <field name="hated team"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record id="football_referee_form" model="ir.ui.view">
+                <field name="name">football.referee.form</field>
+                <field name="model">football.referee</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Referees data">
+                        <sheet>
+                            <group>
+                                <field name="name"/>
+                                <field name="surname"/>
+                                <field name="date_of_birth"/>
+                                <field name="age"/>
+                                <field name="favourite team"/>
+                                <field name="team_id"/>
+                                <field name="hated team"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_football_referee">
+                <field name="name">Football referee</field>
+                <field name="res_model">football.referee</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <menuitem id="football_referee_menu" name="Referee"
+                  parent="football_menu"
+                  action="football_list_action"/>
+        </data>
+</openerp>

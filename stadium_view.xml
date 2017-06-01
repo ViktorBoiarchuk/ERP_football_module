@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+        <data>
+            <record id="football_stadium_search" model="ir.ui.view">
+                <field name="name">football.stadium.search</field>
+                <field name="model">football.stadium</field>
+                <field name="type">search</field>
+                <field name="arch" type="xml">
+                    <search string="Search for stadium">
+                        <group>
+                            <field name="name"/>
+                            <field name="country"/>
+                            <field name="date_of_foundation"/>
+                            <field name="capacity"/>
+                            <field name="compliance_with_UEFA"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
+
+            <record id="football_stadium_tree" model="ir.ui.view">
+                <field name="name">football.stadium.tree</field>
+                <field name="model">football.stadium</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Stadiums data">
+                        <field name="name"/>
+                        <field name="country"/>
+                        <field name="date_of_foundation"/>
+                        <field name="capacity"/>
+                        <field name="compliance_with_UEFA"/>
+                        <field name="team_id"/>
+                        <field name="team_ids"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record id="football_stadium_form" model="ir.ui.view">
+                <field name="name">football.stadium.form</field>
+                <field name="model">football.stadium</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Stadiums data">
+                        <sheet>
+                            <group>
+                                <field name="name"/>
+                                <field name="country"/>
+                                <field name="date_of_foundation"/>
+                                <field name="capacity"/>
+                                <field name="compliance_with_UEFA"/>
+                                <field name="team_id"/>
+                                <field name="team_ids"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_football_stadium">
+                <field name="name">Football stadium</field>
+                <field name="res_model">football.stadium</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <menuitem id="football_stadium_menu" name="Stadium"
+                  parent="football_menu"
+                  action="football_list_action"/>
+        </data>
+</openerp>
