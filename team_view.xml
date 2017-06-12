@@ -6,12 +6,13 @@
                 <field name="model">football.team</field>
                 <field name="type">search</field>
                 <field name="arch" type="xml">
-                    <search string="Search for team">
+                    <search string="Team search">
                         <group>
-                            <field name="name"/>
+                            <field name="team_name"/>
                             <field name="foundation_year"/>
                             <field name="starting_date"/>
                             <field name="colours"/>
+                            <!--<field name="stadium_id"/>-->
                         </group>
                     </search>
                 </field>
@@ -23,12 +24,12 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Teams data">
-                        <field name="name"/>
+                        <field name="team_name"/>
                         <field name="foundation_year"/>
                         <field name="starting_date"/>
                         <field name="colours"/>
-                        <field name="player_ids"/>
                         <field name="stadium_id"/>
+                        <!--<field name="player_ids"/>-->
                     </tree>
                 </field>
             </record>
@@ -39,16 +40,14 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Teams data">
-                        <sheet>
-                            <group>
-                                <field name="name"/>
-                                <field name="foundation_year"/>
-                                <field name="starting_date"/>
-                                <field name="colours"/>
-                                <field name="player_ids"/>
-                                <field name="stadium_id"/>
-                            </group>
-                        </sheet>
+                        <group>
+                            <field name="team_name"/>
+                            <field name="foundation_year"/>
+                            <field name="starting_date"/>
+                            <field name="colours"/>
+                            <field name="stadium_id"/>
+                            <!--<field name="player_ids"/>-->
+                        </group>
                     </form>
                 </field>
             </record>
@@ -60,8 +59,11 @@
                 <field name="view_mode">tree,form</field>
             </record>
 
+            <menuitem id="football_menu" name="Football"/>
+
             <menuitem id="football_team_menu" name="Team"
                   parent="football_menu"
-                  action="football_list_action"/>
+                  action="action_football_team"/>
+
         </data>
 </openerp>

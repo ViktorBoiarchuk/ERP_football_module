@@ -8,11 +8,12 @@
                 <field name="arch" type="xml">
                     <search string="Search for stadium">
                         <group>
-                            <field name="name"/>
+                            <field name="stadium_name"/>
                             <field name="country"/>
                             <field name="date_of_foundation"/>
                             <field name="capacity"/>
                             <field name="compliance_with_UEFA"/>
+                            <!--<field name="team_ids"/>-->
                         </group>
                     </search>
                 </field>
@@ -24,12 +25,11 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Stadiums data">
-                        <field name="name"/>
+                        <field name="stadium_name"/>
                         <field name="country"/>
                         <field name="date_of_foundation"/>
                         <field name="capacity"/>
                         <field name="compliance_with_UEFA"/>
-                        <field name="team_id"/>
                         <field name="team_ids"/>
                     </tree>
                 </field>
@@ -41,17 +41,14 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Stadiums data">
-                        <sheet>
-                            <group>
-                                <field name="name"/>
-                                <field name="country"/>
-                                <field name="date_of_foundation"/>
-                                <field name="capacity"/>
-                                <field name="compliance_with_UEFA"/>
-                                <field name="team_id"/>
-                                <field name="team_ids"/>
-                            </group>
-                        </sheet>
+                        <group>
+                            <field name="stadium_name"/>
+                            <field name="country"/>
+                            <field name="date_of_foundation"/>
+                            <field name="capacity"/>
+                            <field name="compliance_with_UEFA"/>
+                            <field name="team_ids"/>
+                        </group>
                     </form>
                 </field>
             </record>
@@ -65,6 +62,6 @@
 
             <menuitem id="football_stadium_menu" name="Stadium"
                   parent="football_menu"
-                  action="football_list_action"/>
+                  action="action_football_stadium"/>
         </data>
 </openerp>

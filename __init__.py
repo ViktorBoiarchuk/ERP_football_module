@@ -1,2 +1,3 @@
-import team, player, referee, fans, stadium
+import football_team, football_stadium
+#, player, referee, fans
 
