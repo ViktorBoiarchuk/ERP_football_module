@@ -28,7 +28,7 @@
                         <field name="foundation_year"/>
                         <field name="starting_date"/>
                         <field name="colours"/>
-                        <field name="stadium_id"/>
+                        <field name="stadium_id" widget="many2one"/>
                         <!--<field name="player_ids"/>-->
                     </tree>
                 </field>
@@ -45,7 +45,7 @@
                             <field name="foundation_year"/>
                             <field name="starting_date"/>
                             <field name="colours"/>
-                            <field name="stadium_id"/>
+                            <field name="stadium_id" widget="many2one"/>
                             <!--<field name="player_ids"/>-->
                         </group>
                     </form>
