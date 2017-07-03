@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_football_team_user","access_football_team_user","model_football_team","base.group_user",1,1,1,1
+"access_football_stadium_user","access_football_stadium_user","model_football_stadium","base.group_user",1,1,1,1
+"access_football_fans_user","access_football_fans_user","model_football_fans","base.group_user",1,1,1,1
+"access_football_referee_user","access_football_referee_user","model_football_referee","base.group_user",1,1,1,1
+"access_football_player_user","access_football_player_user","model_football_player","base.group_user",1,1,1,1
+

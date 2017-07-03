@@ -41,17 +41,15 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="Fans data">
-                        <sheet>
-                            <group>
-                               <field name="name"/>
-                                <field name="country"/>
-                                <field name="date_of_foundation"/>
-                                <field name="number"/>
-                                <field name="sights"/>
-                                <field name="team_id"/>
-                                <field name="team_ids"/>
-                            </group>
-                        </sheet>
+                        <group>
+                           <field name="name"/>
+                            <field name="country"/>
+                            <field name="date_of_foundation"/>
+                            <field name="number"/>
+                            <field name="sights"/>
+                            <field name="team_id"/>
+                            <field name="team_ids"/>
+                        </group>
                     </form>
                 </field>
             </record>
@@ -60,12 +58,14 @@
                 <field name="name">Football fans</field>
                 <field name="res_model">football.fans</field>
                 <field name="view_type">form</field>
-                <field name="view_mode">tree,form</field>
+                <field name='view_mode'>tree,form</field>
+                <field name="view_id" eval="False"/>
+                <field name="target">current</field>
             </record>
 
             <menuitem id="football_fans_menu" name="Fans"
                   parent="football_menu"
-                  action="football_list_action"/>
+                  action="action_football_fans"/>
 
         </data>
 

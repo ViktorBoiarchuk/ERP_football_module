@@ -8,11 +8,12 @@
                 <field name="arch" type="xml">
                     <search string="Search for stadium">
                         <group>
-                            <field name="stadium_name"/>
+                            <field name="name"/>
                             <field name="country"/>
                             <field name="date_of_foundation"/>
                             <field name="capacity"/>
                             <field name="compliance_with_UEFA"/>
+                            <!--<field name="team_id"/>-->
                             <!--<field name="team_ids"/>-->
                         </group>
                     </search>
@@ -25,12 +26,13 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Stadiums data">
-                        <field name="stadium_name"/>
+                        <field name="name"/>
                         <field name="country"/>
                         <field name="date_of_foundation"/>
                         <field name="capacity"/>
                         <field name="compliance_with_UEFA"/>
-                        <field name="team_ids" widget="one2many"/>
+                        <field name="team_id" groups="football_team"/>
+                        <!--<field name="team_ids"/>-->
                     </tree>
                 </field>
             </record>
@@ -42,19 +44,20 @@
                 <field name="arch" type="xml">
                     <form string="Stadiums data">
                         <group>
-                            <field name="stadium_name"/>
+                            <field name="name"/>
                             <field name="country"/>
                             <field name="date_of_foundation"/>
                             <field name="capacity"/>
                             <field name="compliance_with_UEFA"/>
-                            <field name="team_ids" widget="one2many"/>
+                            <field name="team_id" groups="football_team"/>
+                            <!--<field name="team_ids"/>-->
                         </group>
                     </form>
                 </field>
             </record>
 
             <record model="ir.actions.act_window" id="action_football_stadium">
-                <field name="name">Football stadium</field>
+                <field name="name">football.stadium</field>
                 <field name="res_model">football.stadium</field>
                 <field name="view_type">form</field>
                 <field name="view_mode">tree,form</field>

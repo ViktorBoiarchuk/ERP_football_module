@@ -8,11 +8,11 @@
                 <field name="arch" type="xml">
                     <search string="Team search">
                         <group>
-                            <field name="team_name"/>
-                            <field name="foundation_year"/>
+                            <field name="name"/>
+                            <field name="foundation_date"/>
                             <field name="starting_date"/>
                             <field name="colours"/>
-                            <!--<field name="stadium_id"/>-->
+                            <field name="stadium_id"/>
                         </group>
                     </search>
                 </field>
@@ -24,12 +24,12 @@
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
                     <tree string="Teams data">
-                        <field name="team_name"/>
-                        <field name="foundation_year"/>
+                        <field name="name"/>
+                        <field name="foundation_date"/>
                         <field name="starting_date"/>
                         <field name="colours"/>
-                        <field name="stadium_id" widget="many2one"/>
-                        <!--<field name="player_ids"/>-->
+                        <field name="stadium_id"/>
+                        <field name="player_ids"/>
                     </tree>
                 </field>
             </record>
@@ -41,12 +41,12 @@
                 <field name="arch" type="xml">
                     <form string="Teams data">
                         <group>
-                            <field name="team_name"/>
-                            <field name="foundation_year"/>
+                            <field name="name"/>
+                            <field name="foundation_date"/>
                             <field name="starting_date"/>
                             <field name="colours"/>
-                            <field name="stadium_id" widget="many2one"/>
-                            <!--<field name="player_ids"/>-->
+                            <field name="stadium_id"/>
+                            <field name="player_ids"/>
                         </group>
                     </form>
                 </field>

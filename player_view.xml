@@ -28,7 +28,7 @@
                         <field name="date_of_birth"/>
                         <field name="age"/>
                         <field name="team_id"/>
-                        <field name="favourite stadium"/>
+                        <field name="stadium_ids"/>
                     </tree>
                 </field>
             </record>
@@ -38,17 +38,15 @@
                 <field name="model">football.player</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
-                    <form string="Players data">
-                        <sheet>
-                            <group>
-                               <field name="name"/>
-                               <field name="surname"/>
-                               <field name="date_of_birth"/>
-                               <field name="age"/>
-                               <field name="team_id"/>
-                               <field name="favourite stadium"/>
-                            </group>
-                        </sheet>
+                    <form string="Players data" col="5">
+                        <group colspan="4" col="4">
+                           <field name="name"/>
+                           <field name="surname"/>
+                           <field name="date_of_birth" on_change="onchange_age(date_of_birth)"/>
+                           <field name="age" />
+                           <field name="team_id"/>
+                           <field name="stadium_ids" string="" colspan="3" widget="many2many"/>
+                        </group>
                     </form>
                 </field>
             </record>
@@ -62,7 +60,7 @@
 
             <menuitem id="football_player_menu" name="Player"
                   parent="football_menu"
-                  action="football_list_action"/>
+                  action="action_football_player"/>
 
         </data>
 
