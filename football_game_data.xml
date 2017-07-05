@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+        <data>
+            <record id="football_game_data_search" model="ir.ui.view">
+                <field name="name">football.game.data.search</field>
+                <field name="model">football.game.data</field>
+                <field name="type">search</field>
+                <field name="arch" type="xml">
+                    <search string="Search for extra game data">
+                        <group>
+                            <field name="team"/>
+                            <field name="game_id"/>
+                            <field name="player_id"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
+
+            <record id="football_game_data_tree" model="ir.ui.view">
+                <field name="name">football.game.data.tree</field>
+                <field name="model">football.game.data</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="Extra game data">
+                        <!--<field name="game_id"/>-->
+                        <field name="player_id"/>
+                        <field name="team"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record id="football_game_data_form" model="ir.ui.view">
+                <field name="name">football.game.data.form</field>
+                <field name="model">football.game.data</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Extra game data">
+                        <group>
+                            <field name="team"/>
+                            <field name="game_id"/>
+                            <field name="player_id"/>
+                        </group>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_football_game_data">
+                <field name="name">Extra game data</field>
+                <field name="res_model">football.game.data</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <menuitem id="football_game_data_menu" name="Extra game data"
+                  parent="football_menu"
+                  action="action_football_game_data"/>
+
+        </data>
+</openerp>

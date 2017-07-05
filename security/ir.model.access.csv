@@ -4,4 +4,6 @@
 "access_football_fans_user","access_football_fans_user","model_football_fans","base.group_user",1,1,1,1
 "access_football_referee_user","access_football_referee_user","model_football_referee","base.group_user",1,1,1,1
 "access_football_player_user","access_football_player_user","model_football_player","base.group_user",1,1,1,1
+"access_football_game_user","access_football_game_user","model_football_game","base.group_user",1,1,1,1
+"access_football_game_data_user","access_football_game_data_user","model_football_game_data","base.group_user",1,1,1,1
 

@@ -13,8 +13,6 @@
                             <field name="date_of_foundation"/>
                             <field name="capacity"/>
                             <field name="compliance_with_UEFA"/>
-                            <!--<field name="team_id"/>-->
-                            <!--<field name="team_ids"/>-->
                         </group>
                     </search>
                 </field>
@@ -32,7 +30,6 @@
                         <field name="capacity"/>
                         <field name="compliance_with_UEFA"/>
                         <field name="team_id" groups="football_team"/>
-                        <!--<field name="team_ids"/>-->
                     </tree>
                 </field>
             </record>
@@ -50,7 +47,6 @@
                             <field name="capacity"/>
                             <field name="compliance_with_UEFA"/>
                             <field name="team_id" groups="football_team"/>
-                            <!--<field name="team_ids"/>-->
                         </group>
                     </form>
                 </field>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.object" id="player_form">
+            <field name="model_name">football.player</field>
+            <field name="model_method">resulted_table_creating</field>
+            <field name="description">Player choosing</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</openerp>

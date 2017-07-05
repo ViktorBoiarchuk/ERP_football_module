@@ -15,6 +15,10 @@
         'fans_view.xml',
         'referee_view.xml',
         'player_view.xml',
+        'game_view.xml',
+        'football_game_data.xml',
+        # 'wizard/football_wizard_view.xml',
+        'data/ir_actions_object.xml',
     ],
     'installable': True,
 }

@@ -30,7 +30,7 @@
                         <field name="number"/>
                         <field name="sights"/>
                         <field name="team_id"/>
-                        <field name="team_ids"/>
+                        <!--<field name="team_ids"/>-->
                     </tree>
                 </field>
             </record>

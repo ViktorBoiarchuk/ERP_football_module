@@ -38,8 +38,8 @@
                 <field name="model">football.player</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
-                    <form string="Players data" col="5">
-                        <group colspan="4" col="4">
+                    <form string="Players data">
+                        <group>
                            <field name="name"/>
                            <field name="surname"/>
                            <field name="date_of_birth" on_change="onchange_age(date_of_birth)"/>

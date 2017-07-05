@@ -1,4 +1,5 @@
 from openerp.osv import osv, fields
+from datetime import datetime
 
 
 class football_referee(osv.osv):
@@ -10,4 +11,9 @@ class football_referee(osv.osv):
         'age': fields.integer('Age'),
         'team_id': fields.many2one('football.team', 'Lovely team'),
     }
+
+    def onchange_age(self, cr, uid, ids, date_of_birth, context={}):
+        real_age = (datetime.today() - datetime.strptime(date_of_birth, "%Y-%m-%d")).days / 365.2425
+        return {'value': {'age': real_age}}
+
 football_referee()

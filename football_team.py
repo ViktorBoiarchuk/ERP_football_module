@@ -11,6 +11,6 @@ class football_team(osv.osv):
         'player_ids': fields.one2many('football.player', 'team_id', 'Players'),
         'stadium_id': fields.many2one('football.stadium', 'Home stadium'),
         'fans_id': fields.many2one('football.fans', 'Ultras name'),
-        # 'team_id': fields.many2one('football.player', ''),
     }
+
 football_team()

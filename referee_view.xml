@@ -41,7 +41,7 @@
                         <group>
                             <field name="name"/>
                             <field name="surname"/>
-                            <field name="date_of_birth"/>
+                            <field name="date_of_birth" on_change="onchange_age(date_of_birth)"/>
                             <field name="age"/>
                             <field name="team_id"/>
                         </group>

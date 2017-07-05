@@ -10,6 +10,6 @@ class football_fans(osv.osv):
         'number': fields.integer('The number of fans'),
         'sights': fields.boolean('Radical sights'),
         'team_id': fields.many2one('football.team', 'Supported team'),
-        'team_ids': fields.one2many('football.team', 'fans_id', 'Ultras brotherhood'),
+        'team_ids': fields.many2many('football.team', 'fans_team_rel', 'fans_id',  'team_id', 'Ultras brotherhood'),
     }
 football_fans()

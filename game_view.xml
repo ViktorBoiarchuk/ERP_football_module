@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+        <data>
+            <record id="football_game_search" model="ir.ui.view">
+                <field name="name">football.game.search</field>
+                <field name="model">football.game</field>
+                <field name="type">search</field>
+                <field name="arch" type="xml">
+                    <search string="Search for game">
+                        <group>
+                            <field name="name"/>
+                            <field name="datetime"/>
+                            <field name="stadium_id"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
+
+            <record id="football_game_tree" model="ir.ui.view">
+                <field name="name">football.game.tree</field>
+                <field name="model">football.game</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="games data">
+                        <field name="name"/>
+                        <field name="datetime"/>
+                        <field name="stadium_id"/>
+                        <field name="duration" widget="float_time"/>
+                        <!--<field name="player_ids"/>-->
+                        <field name="game_data_ids"/>
+                    </tree>
+                </field>
+            </record>
+
+            <record id="football_game_form" model="ir.ui.view">
+                <field name="name">football.game.form</field>
+                <field name="model">football.game</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="games data">
+                        <group colspan="4">
+                            <field name="name"/>
+                            <field name="datetime"/>
+                            <field name="stadium_id"/>
+                            <field name="duration" widget="float_time"/>
+                            <!--<field name="player_ids"/>-->
+                            <field name="game_data_ids" colspan="4"/>
+                        </group>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_football_game">
+                <field name="name">Football game</field>
+                <field name="res_model">football.game</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <menuitem id="football_game_menu" name="Game"
+                  parent="football_menu"
+                  action="action_football_game"/>
+
+        </data>
+</openerp>
