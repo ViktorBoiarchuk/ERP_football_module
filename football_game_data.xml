@@ -6,7 +6,7 @@
                 <field name="model">football.game.data</field>
                 <field name="type">search</field>
                 <field name="arch" type="xml">
-                    <search string="Search for extra game data">
+                    <search string="Search for game data">
                         <group>
                             <field name="team"/>
                             <field name="game_id"/>
@@ -21,10 +21,11 @@
                 <field name="model">football.game.data</field>
                 <field name="type">tree</field>
                 <field name="arch" type="xml">
-                    <tree string="Extra game data">
+                    <tree string="Game data">
                         <!--<field name="game_id"/>-->
                         <field name="player_id"/>
                         <field name="team"/>
+                        <field name="team_satisfaction"/>
                     </tree>
                 </field>
             </record>
@@ -34,7 +35,7 @@
                 <field name="model">football.game.data</field>
                 <field name="type">form</field>
                 <field name="arch" type="xml">
-                    <form string="Extra game data">
+                    <form string="Game data">
                         <group>
                             <field name="team"/>
                             <field name="game_id"/>
@@ -51,7 +52,7 @@
                 <field name="view_mode">tree,form</field>
             </record>
 
-            <menuitem id="football_game_data_menu" name="Extra game data"
+            <menuitem id="football_game_data_menu" name="Game data"
                   parent="football_menu"
                   action="action_football_game_data"/>
 
